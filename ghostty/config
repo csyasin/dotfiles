@@ -1,0 +1,18 @@
+font-size = 16
+font-family = "CaskaydiaCove Nerd Font Mono"
+theme = tokyonight
+window-width = 150
+window-height = 40
+window-padding-x = 15
+window-padding-balance
+adjust-cell-height = 10%
+macos-titlebar-style = hidden
+background-opacity = 0.95
+background-blur = true
+# custom-shader = shaders/bettercrt.glsl
+# custom-shader = shaders/drunkard.glsl
+# custom-shader = shaders/glitchy.glsl
+# custom-shader = shaders/retro-terminal.glsl
+# custom-shader = shaders/tft.glsl
+# custom-shader = shaders/underwater.glsl
+# custom-shader = shaders/water.glsl

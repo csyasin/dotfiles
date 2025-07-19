@@ -1,0 +1,383 @@
+{
+  "actions" : [
+    {
+      "actions" : [
+        {
+          "key" : "v",
+          "type" : "application",
+          "value" : "/Applications/Visual Studio Code.app"
+        },
+        {
+          "key" : "c",
+          "type" : "application",
+          "value" : "/Applications/Google Chrome.app"
+        },
+        {
+          "key" : "w",
+          "type" : "application",
+          "value" : "/Applications/Warp.app"
+        },
+        {
+          "key" : "l",
+          "type" : "application",
+          "value" : "/Applications/Lark.app"
+        },
+        {
+          "key" : "n",
+          "type" : "application",
+          "value" : "/Applications/Notion.app"
+        },
+        {
+          "key" : "g",
+          "type" : "application",
+          "value" : "/Applications/Ghostty.app"
+        },
+        {
+          "key" : "z",
+          "type" : "application",
+          "value" : "/Applications/Zed.app"
+        },
+        {
+          "key" : "s",
+          "type" : "application",
+          "value" : "/System/Applications/System Settings.app"
+        },
+        {
+          "key" : "m",
+          "type" : "application",
+          "value" : "/System/Applications/Mail.app"
+        },
+        {
+          "iconPath" : "/System/Library/CoreServices/Finder.app",
+          "key" : "f",
+          "label" : "Finder",
+          "type" : "command",
+          "value" : "open /System/Library/CoreServices/Finder.app\n"
+        },
+        {
+          "key" : "e",
+          "type" : "application",
+          "value" : "/Applications/NeteaseMusic.app"
+        }
+      ],
+      "iconPath" : "square.grid.3x3.fill",
+      "key" : "a",
+      "label" : "Applications",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "iconPath" : "inset.filled.lefthalf.righthalf.rectangle",
+          "key" : "l",
+          "label" : "Left Half",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/left-half"
+        },
+        {
+          "iconPath" : "inset.filled.righthalf.lefthalf.rectangle",
+          "key" : "r",
+          "label" : "Right Half",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/right-half"
+        },
+        {
+          "iconPath" : "inset.filled.tophalf.bottomhalf.rectangle",
+          "key" : "t",
+          "label" : "Top Half",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/top-half"
+        },
+        {
+          "iconPath" : "inset.filled.bottomhalf.tophalf.rectangle",
+          "key" : "b",
+          "label" : "Bottom Half",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/bottom-half"
+        },
+        {
+          "iconPath" : "camera.metering.center.weighted",
+          "key" : "c",
+          "label" : "Center",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/center"
+        },
+        {
+          "iconPath" : "arrow.down.left.and.arrow.up.right.rectangle",
+          "key" : "m",
+          "label" : "Maximize",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/maximize"
+        },
+        {
+          "iconPath" : "inset.filled.center.rectangle",
+          "key" : "a",
+          "label" : "Almost Maximize",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/almost-maximize"
+        },
+        {
+          "iconPath" : "arrow.down.left.and.arrow.up.right.rectangle.fill",
+          "key" : "f",
+          "label" : "Fullscreen",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/toggle-fullscreen"
+        },
+        {
+          "iconPath" : "appwindow.swipe.rectangle",
+          "key" : "n",
+          "label" : "Next Display",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/next-display"
+        },
+        {
+          "iconPath" : "arrow.left.square.fill",
+          "key" : ",",
+          "label" : "Previous Desktop",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/previous-desktop"
+        },
+        {
+          "iconPath" : "arrow.right.square.fill",
+          "key" : ".",
+          "label" : "Next Desktop",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/next-desktop"
+        }
+      ],
+      "iconPath" : "square.split.2x1.fill",
+      "key" : "w",
+      "label" : "Window Management",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "iconPath" : "document.on.clipboard.fill",
+          "key" : "v",
+          "label" : "Clipboard History",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/clipboard-history/clipboard-history"
+        },
+        {
+          "iconPath" : "translate",
+          "key" : "t",
+          "label" : "Translate",
+          "type" : "url",
+          "value" : "raycast://extensions/isfeng/easydict/easydict?arguments=%7B%22queryText%22%3A%22%22%7D"
+        },
+        {
+          "iconPath" : "chevron.left.chevron.right",
+          "key" : "r",
+          "label" : "List Repos",
+          "type" : "url",
+          "value" : "raycast://extensions/moored/git-repos/list"
+        },
+        {
+          "iconPath" : "pencil.tip",
+          "key" : "c",
+          "label" : "Pick Color",
+          "type" : "url",
+          "value" : "raycast://extensions/thomas/color-picker/pick-color"
+        },
+        {
+          "iconPath" : "timelapse",
+          "key" : "f",
+          "label" : "Confetti",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/raycast/confetti"
+        },
+        {
+          "iconPath" : "qrcode",
+          "key" : "q",
+          "label" : "Generate QR Code",
+          "type" : "url",
+          "value" : "raycast://extensions/Melvynx/qrcode-generator/index"
+        },
+        {
+          "iconPath" : "magnifyingglass",
+          "key" : "g",
+          "label" : "Google Search",
+          "type" : "url",
+          "value" : "raycast://extensions/mblode/google-search/index"
+        }
+      ],
+      "iconPath" : "puzzlepiece.extension.fill",
+      "key" : "r",
+      "label" : "Raycast",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "a",
+          "label" : "Capture Area",
+          "type" : "url",
+          "value" : "cleanshot://capture-area"
+        },
+        {
+          "key" : "p",
+          "label" : "Capture Previous Area",
+          "type" : "url",
+          "value" : "cleanshot://capture-previous-area"
+        },
+        {
+          "key" : "f",
+          "label" : "Capture Fullscreen",
+          "type" : "url",
+          "value" : "cleanshot://capture-fullscreen"
+        },
+        {
+          "key" : "w",
+          "label" : "Capture Window",
+          "type" : "url",
+          "value" : "cleanshot://capture-window"
+        },
+        {
+          "key" : "s",
+          "label" : "Scrolling Capture",
+          "type" : "url",
+          "value" : "cleanshot://scrolling-capture"
+        },
+        {
+          "key" : "r",
+          "label" : "Record Screen",
+          "type" : "url",
+          "value" : "cleanshot://record-screen"
+        },
+        {
+          "key" : "t",
+          "label" : "Capture Text(OCR)",
+          "type" : "url",
+          "value" : "cleanshot://capture-text"
+        }
+      ],
+      "iconPath" : "camera.fill",
+      "key" : "c",
+      "label" : "Capture",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "iconPath" : "lock",
+          "key" : "l",
+          "label" : "Lock Screen",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/lock-screen"
+        },
+        {
+          "iconPath" : "trash",
+          "key" : "e",
+          "label" : "Empty Trash",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/empty-trash"
+        },
+        {
+          "iconPath" : "power",
+          "key" : "s",
+          "label" : "Shut Down",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/shut-down"
+        },
+        {
+          "iconPath" : "power.dotted",
+          "key" : "r",
+          "label" : "Restart",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/restart"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "a",
+              "label" : "0%",
+              "type" : "url",
+              "value" : "raycast://extensions/raycast/system/set-volume-to-0"
+            },
+            {
+              "key" : "s",
+              "label" : "25%",
+              "type" : "url",
+              "value" : "raycast://extensions/raycast/system/set-volume-to-25"
+            },
+            {
+              "key" : "d",
+              "label" : "50%",
+              "type" : "url",
+              "value" : "raycast://extensions/raycast/system/set-volume-to-50"
+            },
+            {
+              "key" : "f",
+              "label" : "75%",
+              "type" : "url",
+              "value" : "raycast://extensions/raycast/system/set-volume-to-75"
+            },
+            {
+              "key" : "g",
+              "label" : "100%",
+              "type" : "url",
+              "value" : "raycast://extensions/raycast/system/set-volume-to-100"
+            }
+          ],
+          "iconPath" : "speaker.wave.2.fill",
+          "key" : "v",
+          "label" : "Volume",
+          "type" : "group"
+        }
+      ],
+      "iconPath" : "apple.logo",
+      "key" : "s",
+      "label" : "System",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "iconPath" : "square.and.arrow.down.fill",
+          "key" : "d",
+          "type" : "folder",
+          "value" : "/Users/yasin/Downloads"
+        },
+        {
+          "iconPath" : "photo.fill",
+          "key" : "p",
+          "type" : "folder",
+          "value" : "/Users/yasin/Pictures"
+        },
+        {
+          "iconPath" : "text.document.fill",
+          "key" : "o",
+          "type" : "folder",
+          "value" : "/Users/yasin/Documents"
+        },
+        {
+          "iconPath" : "house.fill",
+          "key" : "h",
+          "label" : "Home",
+          "type" : "folder",
+          "value" : "/Users/yasin"
+        }
+      ],
+      "iconPath" : "folder.fill",
+      "key" : "f",
+      "label" : "Folder",
+      "type" : "group"
+    },
+    {
+      "iconPath" : "arrow.left.square.fill",
+      "key" : ",",
+      "label" : "Previous Desktop",
+      "type" : "command",
+      "value" : "osascript -e 'tell application \"System Events\" to key code 123 using control down'"
+    },
+    {
+      "iconPath" : "arrow.right.square.fill",
+      "key" : ".",
+      "label" : "Next Desktop",
+      "type" : "command",
+      "value" : "osascript -e 'tell application \"System Events\" to key code 124 using control down'"
+    }
+  ],
+  "type" : "group"
+}

@@ -1,0 +1,41 @@
+#!/usr/bin/env sh
+
+#
+# for this to work you must configure sudo such that
+# it will be able to run the command without password
+#
+# see this wiki page for information:
+#  - https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#configure-scripting-addition
+#
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+#
+
+# global settings
+yabai -m config \
+  external_bar off:40:0 \
+  top_padding 30 \
+  bottom_padding 30 \
+  left_padding 30 \
+  right_padding 30 \
+  window_gap 30 \
+  display_arrangement_order default \
+  window_origin_display default \
+  window_placement second_child \
+  window_insertion_point focused \
+  window_zoom_persist off \
+  window_shadow float \
+  window_animation_duration 0.3 \
+  window_animation_easing ease_out_quint \
+  window_opacity off \
+  insert_feedback_color 0xffd75f5f \
+  split_ratio 0.50 \
+  split_type auto \
+  auto_balance off \
+  layout bsp \
+  mouse_modifier fn \
+  mouse_action1 move \
+  mouse_action2 resize \
+  mouse_drop_action swap
+
+yabai -m rule --add app="^系统设置$" manage=off
