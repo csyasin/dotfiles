@@ -1,0 +1,45 @@
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+ITEM_DIR="$CONFIG_DIR/items"
+
+##### Bar Appearance #####
+bar=(
+  position=top
+  height=40
+  blur_radius=30
+  margin=10
+  y_offset=10
+  corner_radius=10
+  padding_left=10
+  padding_right=10
+  color=0x50000000
+)
+sketchybar --bar "${bar[@]}"
+
+##### Changing Defaults #####
+default=(
+  padding_left=5
+  padding_right=5
+  icon.font="SF Pro:Regular:14.0"
+  icon.color=0xffffffff
+  icon.padding_left=5
+  icon.padding_right=5
+  label.color=0xffffffff
+  label.font="SF Pro:Regular:14.0"
+  label.padding_left=5
+  label.padding_right=5
+)
+sketchybar --default "${default[@]}"
+
+##### Adding Left Items #####
+source $ITEM_DIR/aerospace_space.sh
+source $ITEM_DIR/chevron.sh
+source $ITEM_DIR/front_app.sh
+
+##### Adding Right Items #####
+source $ITEM_DIR/calendar.sh
+source $ITEM_DIR/battery.sh
+source $ITEM_DIR/volume.sh
+source $ITEM_DIR/mail.sh
+
+##### Force all scripts to run the first time (never do this in a script) #####
+sketchybar --update
