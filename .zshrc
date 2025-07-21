@@ -23,13 +23,19 @@ alias cb='CB=$(git branch --show-current);echo "$CB" | pbcopy;echo "$CB Copied!"
 alias ip='curl cip.cc'
 alias localip='LOCAL_IP=$(ipconfig getifaddr en0);echo "$LOCAL_IP" | pbcopy;echo "$LOCAL_IP Copied!"'
 
-alias zshconfig="nvim ~/.zshrc"
-alias zshreload="source ~/.zshrc"
+# 开启代理
+alias proxy='export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890'
+# 关闭代理
+alias unproxy='unset https_proxy http_proxy all_proxy'
 
 # 查看当前 shell 的架构
 alias checkarch="uname -m"
 # 临时切换到 x86 的 zsh，使用 exit 回到 arm 架构
 alias usex86="arch -x86_64 zsh"
+
+alias zshconfig="nvim ~/.zshrc"
+alias zshreload="source ~/.zshrc"
+
 
 # 上传蒲公英
 [ -f ~/.upload_pgyer ] && source ~/.upload_pgyer
