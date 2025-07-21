@@ -7,8 +7,11 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 source <(fzf --zsh)
 
-alias ll='eza --long --icons'
+alias ll='eza --long --icons=always'
 alias la='eza -la'
+alias tree='eza --icons=always -T -L'
+alias ssh='TERM=xterm-256color ssh'
+alias cat='bat -p'
 alias yz=yazi
 alias lg=lazygit
 
@@ -16,6 +19,7 @@ alias gl='git pull'
 alias gm='git merge'
 alias ga='git add .'
 alias gc='git commit -m'
+alias gg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gcn='git commit -n -m'
 alias ggpush='git push origin $(git branch --show-current)'
 alias cb='CB=$(git branch --show-current);echo "$CB" | pbcopy;echo "$CB Copied!"'
