@@ -94,3 +94,13 @@ fn - z : open -a Zed
 fn - 0x2B : open -a "System Settings"
 
 # endregion
+
+ctrl + cmd - c : open raycast://extensions/thomas/color-picker/pick-color
+ctrl + cmd - f : open raycast://extensions/raycast/raycast/confetti
+ctrl + cmd - g : open raycast://extensions/mblode/google-search/index
+ctrl + cmd - j : open cleanshot://capture-area
+ctrl + cmd - l : open raycast://extensions/raycast/system/lock-screen
+ctrl + cmd - o : open cleanshot://capture-text
+ctrl + cmd - p : open raycast://extensions/moored/git-repos/list
+ctrl + cmd - q : open raycast://extensions/Melvynx/qrcode-generator/index
+ctrl + cmd - t : open raycast://extensions/isfeng/easydict/easydict
