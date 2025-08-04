@@ -60,7 +60,7 @@
           "value" : "/Applications/NeteaseMusic.app"
         }
       ],
-      "iconPath" : "square.grid.3x3.fill",
+      "iconPath" : "circle.hexagongrid.fill",
       "key" : "a",
       "label" : "Applications",
       "type" : "group"
@@ -145,7 +145,7 @@
           "value" : "raycast://extensions/raycast/window-management/next-desktop"
         }
       ],
-      "iconPath" : "square.split.2x1.fill",
+      "iconPath" : "appwindow.swipe.rectangle",
       "key" : "w",
       "label" : "Window Management",
       "type" : "group"
@@ -252,7 +252,7 @@
           "value" : "cleanshot://capture-text"
         }
       ],
-      "iconPath" : "camera.fill",
+      "iconPath" : "camera.on.rectangle.fill",
       "key" : "c",
       "label" : "Capture",
       "type" : "group"
