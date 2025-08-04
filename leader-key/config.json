@@ -124,7 +124,7 @@
           "value" : "raycast://extensions/raycast/window-management/toggle-fullscreen"
         },
         {
-          "iconPath" : "appwindow.swipe.rectangle",
+          "iconPath" : "display.2",
           "key" : "d",
           "label" : "Next Display",
           "type" : "url",
@@ -139,7 +139,7 @@
     {
       "actions" : [
         {
-          "iconPath" : "document.on.clipboard.fill",
+          "iconPath" : "document.on.document",
           "key" : "v",
           "label" : "Clipboard History",
           "type" : "url",
@@ -153,21 +153,21 @@
           "value" : "raycast://extensions/isfeng/easydict/easydict?arguments=%7B%22queryText%22%3A%22%22%7D"
         },
         {
-          "iconPath" : "chevron.left.chevron.right",
+          "iconPath" : "list.bullet.rectangle",
           "key" : "r",
           "label" : "List Repos",
           "type" : "url",
           "value" : "raycast://extensions/moored/git-repos/list"
         },
         {
-          "iconPath" : "pencil.tip",
+          "iconPath" : "paintpalette",
           "key" : "c",
           "label" : "Pick Color",
           "type" : "url",
           "value" : "raycast://extensions/thomas/color-picker/pick-color"
         },
         {
-          "iconPath" : "timelapse",
+          "iconPath" : "fireworks",
           "key" : "f",
           "label" : "Confetti",
           "type" : "url",
@@ -188,7 +188,7 @@
           "value" : "raycast://extensions/mblode/google-search/index"
         }
       ],
-      "iconPath" : "puzzlepiece.extension.fill",
+      "iconPath" : "inset.filled.diamond",
       "key" : "r",
       "label" : "Raycast",
       "type" : "group"
@@ -196,42 +196,42 @@
     {
       "actions" : [
         {
+          "iconPath" : "viewfinder",
           "key" : "a",
           "label" : "Capture Area",
           "type" : "url",
           "value" : "cleanshot://capture-area"
         },
         {
-          "key" : "p",
-          "label" : "Capture Previous Area",
-          "type" : "url",
-          "value" : "cleanshot://capture-previous-area"
-        },
-        {
+          "iconPath" : "camera.viewfinder",
           "key" : "f",
           "label" : "Capture Fullscreen",
           "type" : "url",
           "value" : "cleanshot://capture-fullscreen"
         },
         {
+          "iconPath" : "document.viewfinder.fill",
           "key" : "w",
           "label" : "Capture Window",
           "type" : "url",
           "value" : "cleanshot://capture-window"
         },
         {
+          "iconPath" : "ellipsis.viewfinder",
           "key" : "s",
           "label" : "Scrolling Capture",
           "type" : "url",
           "value" : "cleanshot://scrolling-capture"
         },
         {
+          "iconPath" : "dot.circle.viewfinder",
           "key" : "r",
           "label" : "Record Screen",
           "type" : "url",
           "value" : "cleanshot://record-screen"
         },
         {
+          "iconPath" : "text.viewfinder",
           "key" : "t",
           "label" : "Capture Text(OCR)",
           "type" : "url",
@@ -267,7 +267,7 @@
           "value" : "raycast://extensions/raycast/system/shut-down"
         },
         {
-          "iconPath" : "power.dotted",
+          "iconPath" : "arrow.clockwise",
           "key" : "r",
           "label" : "Restart",
           "type" : "url",
@@ -282,25 +282,25 @@
     {
       "actions" : [
         {
-          "iconPath" : "square.and.arrow.down.fill",
+          "iconPath" : "square.and.arrow.down",
           "key" : "d",
           "type" : "folder",
           "value" : "/Users/yasin/Downloads"
         },
         {
-          "iconPath" : "photo.fill",
+          "iconPath" : "photo",
           "key" : "p",
           "type" : "folder",
           "value" : "/Users/yasin/Pictures"
         },
         {
-          "iconPath" : "text.document.fill",
+          "iconPath" : "text.document",
           "key" : "o",
           "type" : "folder",
           "value" : "/Users/yasin/Documents"
         },
         {
-          "iconPath" : "house.fill",
+          "iconPath" : "house",
           "key" : "h",
           "label" : "Home",
           "type" : "folder",
