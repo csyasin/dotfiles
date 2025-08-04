@@ -125,7 +125,7 @@
         },
         {
           "iconPath" : "appwindow.swipe.rectangle",
-          "key" : "n",
+          "key" : "d",
           "label" : "Next Display",
           "type" : "url",
           "value" : "raycast://extensions/raycast/window-management/next-display"
@@ -286,44 +286,6 @@
           "label" : "Restart",
           "type" : "url",
           "value" : "raycast://extensions/raycast/system/restart"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "a",
-              "label" : "0%",
-              "type" : "url",
-              "value" : "raycast://extensions/raycast/system/set-volume-to-0"
-            },
-            {
-              "key" : "s",
-              "label" : "25%",
-              "type" : "url",
-              "value" : "raycast://extensions/raycast/system/set-volume-to-25"
-            },
-            {
-              "key" : "d",
-              "label" : "50%",
-              "type" : "url",
-              "value" : "raycast://extensions/raycast/system/set-volume-to-50"
-            },
-            {
-              "key" : "f",
-              "label" : "75%",
-              "type" : "url",
-              "value" : "raycast://extensions/raycast/system/set-volume-to-75"
-            },
-            {
-              "key" : "g",
-              "label" : "100%",
-              "type" : "url",
-              "value" : "raycast://extensions/raycast/system/set-volume-to-100"
-            }
-          ],
-          "iconPath" : "speaker.wave.2.fill",
-          "key" : "v",
-          "label" : "Volume",
-          "type" : "group"
         }
       ],
       "iconPath" : "apple.logo",
@@ -363,20 +325,6 @@
       "key" : "f",
       "label" : "Folder",
       "type" : "group"
-    },
-    {
-      "iconPath" : "arrow.left.square.fill",
-      "key" : ",",
-      "label" : "Previous Desktop",
-      "type" : "command",
-      "value" : "osascript -e 'tell application \"System Events\" to key code 123 using control down'"
-    },
-    {
-      "iconPath" : "arrow.right.square.fill",
-      "key" : ".",
-      "label" : "Next Desktop",
-      "type" : "command",
-      "value" : "osascript -e 'tell application \"System Events\" to key code 124 using control down'"
     }
   ],
   "type" : "group"
