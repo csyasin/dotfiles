@@ -12,6 +12,10 @@ ln -sf "$DOTFILES_DIR/starship.toml" ~/.config/starship.toml
 rm -rf ~/.config/ghostty
 ln -sf "$DOTFILES_DIR/ghostty" ~/.config/ghostty
 
+# warp
+rm -rf ~/.warp
+ln -sf "$DOTFILES_DIR/warp" ~/.warp
+
 # yabai
 rm -rf ~/.config/yabai
 ln -sf "$DOTFILES_DIR/yabai" ~/.config/yabai
@@ -48,3 +52,4 @@ ln -sf "$DOTFILES_DIR/leader-key" ~/.config/leader-key
 # vscode
 rm -rf ~/.config/vscode
 ln -sf "$DOTFILES_DIR/vscode" ~/.config/vscode
+
