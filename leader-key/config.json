@@ -1,6 +1,13 @@
 {
   "actions" : [
     {
+      "iconPath" : "square.fill.on.square.fill",
+      "key" : " ",
+      "label" : "Clipboard History",
+      "type" : "url",
+      "value" : "raycast://extensions/raycast/clipboard-history/clipboard-history"
+    },
+    {
       "actions" : [
         {
           "key" : "v",
@@ -67,84 +74,6 @@
     },
     {
       "actions" : [
-        {
-          "iconPath" : "inset.filled.lefthalf.righthalf.rectangle",
-          "key" : "l",
-          "label" : "Left Half",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/left-half"
-        },
-        {
-          "iconPath" : "inset.filled.righthalf.lefthalf.rectangle",
-          "key" : "r",
-          "label" : "Right Half",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/right-half"
-        },
-        {
-          "iconPath" : "inset.filled.tophalf.bottomhalf.rectangle",
-          "key" : "t",
-          "label" : "Top Half",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/top-half"
-        },
-        {
-          "iconPath" : "inset.filled.bottomhalf.tophalf.rectangle",
-          "key" : "b",
-          "label" : "Bottom Half",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/bottom-half"
-        },
-        {
-          "iconPath" : "camera.metering.center.weighted",
-          "key" : "c",
-          "label" : "Center",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/center"
-        },
-        {
-          "iconPath" : "arrow.down.left.and.arrow.up.right.rectangle",
-          "key" : "m",
-          "label" : "Maximize",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/maximize"
-        },
-        {
-          "iconPath" : "inset.filled.center.rectangle",
-          "key" : "a",
-          "label" : "Almost Maximize",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/almost-maximize"
-        },
-        {
-          "iconPath" : "arrow.down.left.and.arrow.up.right.rectangle.fill",
-          "key" : "f",
-          "label" : "Fullscreen",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/toggle-fullscreen"
-        },
-        {
-          "iconPath" : "display.2",
-          "key" : "d",
-          "label" : "Next Display",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/next-display"
-        }
-      ],
-      "iconPath" : "appwindow.swipe.rectangle",
-      "key" : "w",
-      "label" : "Window Management",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "iconPath" : "document.on.document",
-          "key" : "v",
-          "label" : "Clipboard History",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/clipboard-history/clipboard-history"
-        },
         {
           "iconPath" : "translate",
           "key" : "t",
@@ -238,9 +167,113 @@
           "value" : "cleanshot://capture-text"
         }
       ],
-      "iconPath" : "camera.on.rectangle.fill",
+      "iconPath" : "camera.macro",
       "key" : "c",
       "label" : "Capture",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "iconPath" : "square.and.arrow.down",
+          "key" : "d",
+          "type" : "folder",
+          "value" : "/Users/yasin/Downloads"
+        },
+        {
+          "iconPath" : "photo",
+          "key" : "p",
+          "type" : "folder",
+          "value" : "/Users/yasin/Pictures"
+        },
+        {
+          "iconPath" : "text.document",
+          "key" : "o",
+          "type" : "folder",
+          "value" : "/Users/yasin/Documents"
+        },
+        {
+          "iconPath" : "house",
+          "key" : "h",
+          "label" : "Home",
+          "type" : "folder",
+          "value" : "/Users/yasin"
+        }
+      ],
+      "iconPath" : "folder.fill",
+      "key" : "d",
+      "label" : "Directory",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "iconPath" : "inset.filled.lefthalf.righthalf.rectangle",
+          "key" : "l",
+          "label" : "Left Half",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/left-half"
+        },
+        {
+          "iconPath" : "inset.filled.righthalf.lefthalf.rectangle",
+          "key" : "r",
+          "label" : "Right Half",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/right-half"
+        },
+        {
+          "iconPath" : "inset.filled.tophalf.bottomhalf.rectangle",
+          "key" : "t",
+          "label" : "Top Half",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/top-half"
+        },
+        {
+          "iconPath" : "inset.filled.bottomhalf.tophalf.rectangle",
+          "key" : "b",
+          "label" : "Bottom Half",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/bottom-half"
+        },
+        {
+          "iconPath" : "camera.metering.center.weighted",
+          "key" : "c",
+          "label" : "Center",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/center"
+        },
+        {
+          "iconPath" : "arrow.down.left.and.arrow.up.right.rectangle",
+          "key" : "m",
+          "label" : "Maximize",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/maximize"
+        },
+        {
+          "iconPath" : "inset.filled.center.rectangle",
+          "key" : "a",
+          "label" : "Almost Maximize",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/almost-maximize"
+        },
+        {
+          "iconPath" : "arrow.down.left.and.arrow.up.right.rectangle.fill",
+          "key" : "f",
+          "label" : "Fullscreen",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/toggle-fullscreen"
+        },
+        {
+          "iconPath" : "display.2",
+          "key" : "d",
+          "label" : "Next Display",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/next-display"
+        }
+      ],
+      "iconPath" : "appwindow.swipe.rectangle",
+      "key" : "w",
+      "label" : "Window Management",
       "type" : "group"
     },
     {
@@ -279,39 +312,6 @@
       "label" : "System",
       "type" : "group"
     },
-    {
-      "actions" : [
-        {
-          "iconPath" : "square.and.arrow.down",
-          "key" : "d",
-          "type" : "folder",
-          "value" : "/Users/yasin/Downloads"
-        },
-        {
-          "iconPath" : "photo",
-          "key" : "p",
-          "type" : "folder",
-          "value" : "/Users/yasin/Pictures"
-        },
-        {
-          "iconPath" : "text.document",
-          "key" : "o",
-          "type" : "folder",
-          "value" : "/Users/yasin/Documents"
-        },
-        {
-          "iconPath" : "house",
-          "key" : "h",
-          "label" : "Home",
-          "type" : "folder",
-          "value" : "/Users/yasin"
-        }
-      ],
-      "iconPath" : "folder.fill",
-      "key" : "f",
-      "label" : "Folder",
-      "type" : "group"
-    }
   ],
   "type" : "group"
 }
