@@ -311,7 +311,7 @@
       "key" : "s",
       "label" : "System",
       "type" : "group"
-    },
+    }
   ],
   "type" : "group"
 }
