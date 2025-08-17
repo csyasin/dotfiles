@@ -1,4 +1,4 @@
-return true
+return {}
   or {
     "sphamba/smear-cursor.nvim",
     opts = {
