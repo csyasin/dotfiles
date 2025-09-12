@@ -2,7 +2,7 @@
   "actions" : [
     {
       "iconPath" : "square.fill.on.square.fill",
-      "key" : " ",
+      "key" : "space",
       "label" : "Clipboard History",
       "type" : "url",
       "value" : "raycast://extensions/raycast/clipboard-history/clipboard-history"
