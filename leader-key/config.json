@@ -209,28 +209,28 @@
       "actions" : [
         {
           "iconPath" : "inset.filled.lefthalf.righthalf.rectangle",
-          "key" : "l",
+          "key" : "h",
           "label" : "Left Half",
           "type" : "url",
           "value" : "raycast://extensions/raycast/window-management/left-half"
         },
         {
           "iconPath" : "inset.filled.righthalf.lefthalf.rectangle",
-          "key" : "r",
+          "key" : "l",
           "label" : "Right Half",
           "type" : "url",
           "value" : "raycast://extensions/raycast/window-management/right-half"
         },
         {
           "iconPath" : "inset.filled.tophalf.bottomhalf.rectangle",
-          "key" : "t",
+          "key" : "k",
           "label" : "Top Half",
           "type" : "url",
           "value" : "raycast://extensions/raycast/window-management/top-half"
         },
         {
           "iconPath" : "inset.filled.bottomhalf.tophalf.rectangle",
-          "key" : "b",
+          "key" : "j",
           "label" : "Bottom Half",
           "type" : "url",
           "value" : "raycast://extensions/raycast/window-management/bottom-half"
