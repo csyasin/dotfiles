@@ -1,11 +1,11 @@
 .monaco-workbench
   .part.editor
   > .content
-  .editor-group-container.active
+  .editor-group-container
   > .title
   .tabs-container
   > .tab.active {
-  clip-path: inset(0 round 6px);
+  clip-path: inset(2px round 6px);
 }
 
 .quick-input-widget {
@@ -39,4 +39,33 @@
     rgb(134, 168, 231)
   ) !important;
   border-radius: 2px;
+}
+
+.monaco-workbench .pane-composite-part:not(.empty) > .header {
+  border-bottom: none !important;
+}
+
+.monaco-workbench
+  .pane-composite-part
+  > .header-or-footer
+  .composite-bar-container {
+  justify-content: center;
+}
+
+.monaco-action-bar .actions-container {
+  gap: 8px;
+}
+
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  > .tabs-and-actions-container.tabs-border-bottom:after,
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title.title-border-bottom:after {
+  display: none !important;
 }
