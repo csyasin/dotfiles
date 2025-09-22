@@ -25,9 +25,6 @@ alias gcn='git commit -n -m'
 alias ggpush='git push origin $(git branch --show-current)'
 alias gb='CB=$(git branch --show-current);echo "$CB" | pbcopy;echo "$CB Copied!"'
 
-alias ip='curl cip.cc'
-alias localip='LOCAL_IP=$(ipconfig getifaddr en0);echo "$LOCAL_IP" | pbcopy;echo "$LOCAL_IP Copied!"'
-
 # 开启代理
 alias proxy='export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890'
 # 关闭代理
