@@ -5,7 +5,7 @@
   > .title
   .tabs-container
   > .tab.active {
-  clip-path: inset(2px round 6px);
+  clip-path: inset(0 round 6px);
 }
 
 .quick-input-widget {
@@ -41,21 +41,6 @@
   border-radius: 2px;
 }
 
-.monaco-workbench .pane-composite-part:not(.empty) > .header {
-  border-bottom: none !important;
-}
-
-.monaco-workbench
-  .pane-composite-part
-  > .header-or-footer
-  .composite-bar-container {
-  justify-content: center;
-}
-
-.monaco-action-bar .actions-container {
-  gap: 8px;
-}
-
 .monaco-workbench
   .part.editor
   > .content
@@ -68,4 +53,33 @@
   .editor-group-container
   > .title.title-border-bottom:after {
   display: none !important;
+}
+
+.activitybar.left
+  .composite-bar
+  .monaco-action-bar.vertical
+  ul.actions-container
+  li.checked {
+  clip-path: inset(8px round 6px);
+  background: #64c1db !important;
+}
+
+.monaco-workbench
+  .activitybar.left
+  > .content
+  :not(.monaco-menu)
+  > .monaco-action-bar
+  .action-item.checked
+  .action-label.codicon {
+  color: #000000 !important;
+}
+
+.monaco-workbench
+  .activitybar.left
+  > .content
+  :not(.monaco-menu)
+  > .monaco-action-bar
+  .action-item.checked
+  .action-label.uri-icon {
+  background-color: #000000 !important;
 }
