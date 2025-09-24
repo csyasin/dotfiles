@@ -9,9 +9,11 @@
 }
 
 .quick-input-widget {
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 0 25px 50px -8px rgba(0, 0, 0, 0.5),
+    0 4px 6px rgba(0, 0, 0, 0.5) !important;
   border-radius: 10px !important;
   padding: 8px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
 
 .quick-input-filter .monaco-inputbox {
@@ -60,8 +62,8 @@
   .monaco-action-bar.vertical
   ul.actions-container
   li.checked {
-  clip-path: inset(8px round 6px);
-  background: #64c1db !important;
+  clip-path: inset(6px round 6px);
+  background: #313142 !important;
 }
 
 .monaco-workbench
@@ -71,7 +73,7 @@
   > .monaco-action-bar
   .action-item.checked
   .action-label.codicon {
-  color: #000000 !important;
+  color: #ffffff !important;
 }
 
 .monaco-workbench
@@ -81,5 +83,5 @@
   > .monaco-action-bar
   .action-item.checked
   .action-label.uri-icon {
-  background-color: #000000 !important;
+  background-color: #ffffff !important;
 }
