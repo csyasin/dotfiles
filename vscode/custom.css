@@ -34,13 +34,11 @@
 
 /* cursor */
 .cursors-layer .cursor {
-  background: linear-gradient(
-    135deg,
-    rgb(127, 127, 213),
-    rgb(145, 234, 228),
-    rgb(134, 168, 231)
-  ) !important;
+  --cyan: #64c1db;
+  --magenta: #82a1f0;
+  background: linear-gradient(45deg, var(--cyan), var(--magenta)) !important;
   border-radius: 2px;
+  box-shadow: 0 0 10px var(--cyan), 0 0 20px var(--cyan), 0 0 30px var(--cyan);
 }
 
 /* remove the lines under tab & breadcrumb */
