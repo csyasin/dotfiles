@@ -1,3 +1,4 @@
+/* tab */
 .monaco-workbench
   .part.editor
   > .content
@@ -9,8 +10,7 @@
 }
 
 .quick-input-widget {
-  box-shadow: 0 25px 50px -8px rgba(0, 0, 0, 0.5),
-    0 4px 6px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 0 25px 50px -8px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.5) !important;
   border-radius: 10px !important;
   padding: 8px !important;
   border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
@@ -43,6 +43,7 @@
   border-radius: 2px;
 }
 
+/* remove the lines under tab & breadcrumb */
 .monaco-workbench
   .part.editor
   > .content
@@ -57,31 +58,17 @@
   display: none !important;
 }
 
+/* activitybar item bg */
 .activitybar.left
   .composite-bar
   .monaco-action-bar.vertical
   ul.actions-container
-  li.checked {
+  li.checked,
+.activitybar.left
+  .composite-bar
+  .monaco-action-bar.vertical
+  ul.actions-container
+  li:hover {
   clip-path: inset(6px round 6px);
   background: #313142 !important;
-}
-
-.monaco-workbench
-  .activitybar.left
-  > .content
-  :not(.monaco-menu)
-  > .monaco-action-bar
-  .action-item.checked
-  .action-label.codicon {
-  color: #ffffff !important;
-}
-
-.monaco-workbench
-  .activitybar.left
-  > .content
-  :not(.monaco-menu)
-  > .monaco-action-bar
-  .action-item.checked
-  .action-label.uri-icon {
-  background-color: #ffffff !important;
 }
