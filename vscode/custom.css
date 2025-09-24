@@ -61,12 +61,20 @@
   .composite-bar
   .monaco-action-bar.vertical
   ul.actions-container
+  li {
+  clip-path: inset(6px round 6px);
+  transition: background 0.2s;
+}
+
+.activitybar.left
+  .composite-bar
+  .monaco-action-bar.vertical
+  ul.actions-container
   li.checked,
 .activitybar.left
   .composite-bar
   .monaco-action-bar.vertical
   ul.actions-container
   li:hover {
-  clip-path: inset(6px round 6px);
   background: #313142 !important;
 }
