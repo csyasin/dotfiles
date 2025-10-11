@@ -36,9 +36,16 @@
 .cursors-layer .cursor {
   --cyan: #64c1db;
   --magenta: #82a1f0;
-  background: linear-gradient(45deg, var(--cyan), var(--magenta)) !important;
+  --yellow: #ff9e65;
+  background: linear-gradient(
+    45deg,
+    var(--yellow),
+    var(--cyan) 30%,
+    var(--magenta)
+  ) !important;
   border-radius: 2px;
-  box-shadow: 0 0 10px var(--cyan), 0 0 20px var(--cyan), 0 0 30px var(--cyan);
+  /* glow */
+  /* box-shadow: 0 0 10px var(--cyan), 0 0 20px var(--cyan), 0 0 30px var(--cyan); */
 }
 
 /* remove the lines under tab & breadcrumb */
@@ -62,8 +69,10 @@
   .monaco-action-bar.vertical
   ul.actions-container
   li {
-  clip-path: inset(6px round 6px);
+  clip-path: inset(4px round 6px);
   transition: background 0.2s;
+  transform-origin: center;
+  transform: scale(0.9);
 }
 
 .activitybar.left
