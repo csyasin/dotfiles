@@ -6,7 +6,8 @@ DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
 ln -sf "$DOTFILES_DIR/.zshrc" ~/.zshrc
 
 # starship
-ln -sf "$DOTFILES_DIR/starship.toml" ~/.config/starship.toml
+rm -rf ~/.config/starship
+ln -sf "$DOTFILES_DIR/starship" ~/.config/starship
 
 # ghostty
 rm -rf ~/.config/ghostty
@@ -52,4 +53,3 @@ ln -sf "$DOTFILES_DIR/leader-key" ~/.config/leader-key
 # vscode
 rm -rf ~/.config/vscode
 ln -sf "$DOTFILES_DIR/vscode" ~/.config/vscode
-
