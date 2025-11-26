@@ -3,6 +3,7 @@
 DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 # zsh
+mv ~/.zshrc ~/.zshrc.bak
 ln -sf "$DOTFILES_DIR/.zshrc" ~/.zshrc
 
 # starship

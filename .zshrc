@@ -39,8 +39,8 @@ alias zshconfig="nvim ~/.zshrc"
 alias zshreload="source ~/.zshrc"
 
 # starship 主题
-# export STARSHIP_CONFIG=~/.config/starship/rose-pine.toml
-export STARSHIP_CONFIG=~/.config/starship/gruvbox.toml
+export STARSHIP_CONFIG=~/.config/starship/rose-pine.toml
+# export STARSHIP_CONFIG=~/.config/starship/gruvbox.toml
 
 
 # 上传蒲公英

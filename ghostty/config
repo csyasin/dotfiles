@@ -9,5 +9,9 @@ adjust-cell-height = 10%
 macos-titlebar-style = hidden
 background-opacity = 0.95
 background-blur = true
+quick-terminal-size = 80%
+
 custom-shader = shaders/cursor-blaze-no-trail.glsl
 custom-shader = shaders/cursor-smear.glsl
+
+keybind = global:cmd+backquote=toggle_quick_terminal
