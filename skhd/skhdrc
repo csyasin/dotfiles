@@ -1,37 +1,67 @@
+# ============================================================
+# Defines
+# ============================================================
+.define anybar : echo -n "{{1}}" | nc -4u -w0 localhost 1738
+.define app : open -a "{{1}}"
+.define url_scheme : open -g "{{1}}"
 
-# Application
-fn - b : open -a "Google Chrome"
-fn - c : open -a Calendar
-fn - f : open -a Finder
-fn - g : open -a Ghostty
-fn - n : open -a Notion
-fn - v : open -a "Visual Studio Code"
-fn - z : open -a Zed
-fn - 0x2B : open -a "System Settings"
+# ============================================================
+# Mode definitions with AnyBar integration
+# ============================================================
+:: default : @anybar("hollow")
+:: leader @ : @anybar("filled")
+:: application @ : @anybar("blue")
+:: raycast @ : @anybar("orange")
+:: capture @ : @anybar("green")
 
-# Mode - Raycast extensions
-::raycast@
-raycast < escape ; default
-raycast < space : open -g raycast://extensions/raycast/clipboard-history/clipboard-history
-raycast < c : open raycast://extensions/thomas/color-picker/pick-color
-raycast < f : open raycast://extensions/raycast/raycast/confetti
-raycast < r : open raycast://extensions/moored/git-repos/list
-raycast < s : open raycast://extensions/mblode/google-search/index
-raycast < t : open raycast://extensions/isfeng/easydict/easydict
-raycast < q : open raycast://extensions/raycast/system/lock-screen
+# ============================================================
+# Enter leader mode
+# ============================================================
+ctrl - space ; leader
 
-# Mode - Capture
-::capture@
-capture < escape ; default
-capture < a : open cleanshot://capture-area
-capture < t : open cleanshot://capture-text
-
-# Mode - leader
-::leader@
+# Leader mode - submenu selection
 leader < escape ; default
+leader < 0x33 ; default
+leader < space ; default : @url_scheme("raycast://extensions/raycast/clipboard-history/clipboard-history")
+leader < a ; application
 leader < r ; raycast
 leader < c ; capture
 
-ctrl - space ; leader
+# ============================================================
+# Mode - Application
+# ============================================================
+application < escape ; default
+application < 0x33 ; leader
+application < a ; default : @app("Antigravity")
+application < b ; default : @app("Google Chrome")
+application < c ; default : @app("Calendar")
+application < f ; default : @app("Finder")
+application < g ; default : @app("Ghostty")
+application < n ; default : @app("Notion")
+application < o ; default : @app("Obsidian")
+application < v ; default : @app("Visual Studio Code")
+application < z ; default : @app("Zed")
+application < 0x2B ; default : @app("System Settings")
 
+# ============================================================
+# Mode - Raycast extensions
+# ============================================================
+raycast < escape ; default
+raycast < 0x33 ; leader
+raycast < p ; default : @url_scheme("raycast://extensions/thomas/color-picker/pick-color")
+raycast < c ; default : @url_scheme("raycast://extensions/raycast/raycast/confetti")
+raycast < r ; default : @url_scheme("raycast://extensions/moored/git-repos/list")
+raycast < s ; default : @url_scheme("raycast://extensions/mblode/google-search/index")
+raycast < t ; default : @url_scheme("raycast://extensions/isfeng/easydict/easydict")
+raycast < l ; default : @url_scheme("raycast://extensions/raycast/system/lock-screen")
 
+# ============================================================
+# Mode - Capture
+# ============================================================
+capture < escape ; default
+capture < 0x33 ; leader
+capture < a ; default : @url_scheme("cleanshot://capture-area")
+capture < f ; default : @url_scheme("cleanshot://capture-fullscreen")
+capture < r ; default : @url_scheme("cleanshot://record-screen")
+capture < s ; default : @url_scheme("cleanshot://scrolling-capture")
+capture < t ; default : @url_scheme("cleanshot://capture-text")

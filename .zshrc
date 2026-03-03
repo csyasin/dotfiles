@@ -42,6 +42,35 @@ alias checkarch="uname -m"
 # 临时切换到 x86 的 zsh，使用 exit 回到 arm 架构
 alias usex86="arch -x86_64 zsh"
 
+# AnyBar 控制函数
+# 用法:
+#   anybar add [title]      - 打开一个新的 AnyBar 实例，端口从 1738 自动递增寻找可用端口
+#                             可选参数 title 设置窗口标题
+#   anybar <color> [port]   - 向指定端口的 AnyBar 发送颜色指令，端口默认 1738
+#                             支持的颜色: white, red, orange, yellow, green, cyan, blue, purple, black, question, exclamation
+# 示例:
+#   anybar add              # 打开 AnyBar，自动分配端口
+#   anybar add "My App"     # 打开 AnyBar，自动分配端口，标题为 "My App"
+#   anybar green 1738       # 将端口 1738 的 AnyBar 设为绿色
+#   anybar red              # 将端口 1738（默认）的 AnyBar 设为红色
+anybar() {
+  if [ "$1" = "add" ]; then
+    # 从 1738 开始寻找未被占用的端口
+    local port=1738
+    while lsof -i UDP:$port >/dev/null 2>&1; do
+      ((port++))
+    done
+    # 如果有第 2 个参数，则设置 ANYBAR_TITLE
+    if [ -n "$2" ]; then
+      ANYBAR_PORT=$port ANYBAR_TITLE="$2" open -na AnyBar
+    else
+      ANYBAR_PORT=$port open -na AnyBar
+    fi
+    echo "AnyBar opened on port $port"
+  else
+    echo -n $1 | nc -4u -w0 localhost ${2:-1738}
+  fi
+}
 
 # 在项目根目录中执行，备份当前项目
 alias backup='rsync -av --delete --exclude="node_modules/" --exclude=".git/" ./ "$HOME/backup-buffalo/$(basename "$PWD")/"'
