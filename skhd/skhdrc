@@ -2,8 +2,6 @@
 # Defines
 # ============================================================
 .define anybar : echo -n "{{1}}" | nc -4u -w0 localhost 1738
-.define app : open -a "{{1}}"
-.define url_scheme : open -g "{{1}}"
 
 # ============================================================
 # Mode definitions with AnyBar integration
@@ -11,57 +9,119 @@
 :: default : @anybar("hollow")
 :: leader @ : @anybar("filled")
 :: application @ : @anybar("blue")
+:: directory @ : @anybar("cyan")
 :: raycast @ : @anybar("orange")
 :: capture @ : @anybar("green")
+:: system @ : @anybar("red")
+:: volume @ : @anybar("purple")
+:: window @ : @anybar("yellow")
 
 # ============================================================
-# Enter leader mode
+# global
 # ============================================================
 ctrl - space ; leader
 
-# Leader mode - submenu selection
+# ============================================================
+# Mode - Leader
+# ============================================================
 leader < escape ; default
 leader < 0x33 ; default
-leader < space ; default : @url_scheme("raycast://extensions/raycast/clipboard-history/clipboard-history")
+leader < space ; default : open -g "raycast://extensions/raycast/clipboard-history/clipboard-history"
 leader < a ; application
+leader < d ; directory
 leader < r ; raycast
 leader < c ; capture
+leader < s ; system
+leader < w ; window
 
 # ============================================================
 # Mode - Application
 # ============================================================
 application < escape ; default
 application < 0x33 ; leader
-application < a ; default : @app("Antigravity")
-application < b ; default : @app("Google Chrome")
-application < c ; default : @app("Calendar")
-application < f ; default : @app("Finder")
-application < g ; default : @app("Ghostty")
-application < n ; default : @app("Notion")
-application < o ; default : @app("Obsidian")
-application < v ; default : @app("Visual Studio Code")
-application < z ; default : @app("Zed")
-application < 0x2B ; default : @app("System Settings")
+application < a ; default : open -a "Antigravity"
+application < b ; default : open -a "Google Chrome"
+application < c ; default : open -a "Calendar"
+application < f ; default : open -a "Finder"
+application < p ; default : open -a "Postman"
+application < g ; default : open -a "Ghostty"
+application < m ; default : open -a "Mail"
+application < n ; default : open -a "Notion"
+application < o ; default : open -a "Obsidian"
+application < v ; default : open -a "Visual Studio Code"
+application < z ; default : open -a "Zed"
+
+# ============================================================
+# Mode - Directory
+# ============================================================
+directory < escape ; default
+directory < 0x33 ; leader
+directory < d ; default : open ~/Downloads
+directory < h ; default : open ~
 
 # ============================================================
 # Mode - Raycast extensions
 # ============================================================
 raycast < escape ; default
 raycast < 0x33 ; leader
-raycast < p ; default : @url_scheme("raycast://extensions/thomas/color-picker/pick-color")
-raycast < c ; default : @url_scheme("raycast://extensions/raycast/raycast/confetti")
-raycast < r ; default : @url_scheme("raycast://extensions/moored/git-repos/list")
-raycast < s ; default : @url_scheme("raycast://extensions/mblode/google-search/index")
-raycast < t ; default : @url_scheme("raycast://extensions/isfeng/easydict/easydict")
-raycast < l ; default : @url_scheme("raycast://extensions/raycast/system/lock-screen")
+raycast < p ; default : open -g "raycast://extensions/thomas/color-picker/pick-color"
+raycast < c ; default : open -g "raycast://extensions/raycast/raycast/confetti"
+raycast < r ; default : open -g "raycast://extensions/moored/git-repos/list"
+raycast < s ; default : open -g "raycast://extensions/mblode/google-search/index"
+raycast < t ; default : open -g "raycast://extensions/isfeng/easydict/easydict"
+
 
 # ============================================================
 # Mode - Capture
 # ============================================================
 capture < escape ; default
 capture < 0x33 ; leader
-capture < a ; default : @url_scheme("cleanshot://capture-area")
-capture < f ; default : @url_scheme("cleanshot://capture-fullscreen")
-capture < r ; default : @url_scheme("cleanshot://record-screen")
-capture < s ; default : @url_scheme("cleanshot://scrolling-capture")
-capture < t ; default : @url_scheme("cleanshot://capture-text")
+capture < a ; default : open -g "cleanshot://capture-area"
+capture < f ; default : open -g "cleanshot://capture-fullscreen"
+capture < r ; default : open -g "cleanshot://record-screen"
+capture < s ; default : open -g "cleanshot://scrolling-capture"
+capture < t ; default : open -g "cleanshot://capture-text"
+
+# ============================================================
+# Mode - System
+# ============================================================
+system < escape ; default
+system < 0x33 ; leader
+system < l ; default : osascript -e 'tell application "System Events" to key code 12 using {command down, control down}'
+system < p ; default : pbpaste | pbcopy && osascript -e "tell application \"System Events\" to keystroke \"v\" using command down"
+system < e ; default : osascript -e 'tell application "Finder" to empty trash' && osascript -e 'display notification "废纸篓已清空！" with title "SKHD"'
+system < s ; default : open -a "System Settings"
+system < v ; volume
+
+# ============================================================
+# Mode - Volume (number keys set volume percentage)
+# ============================================================
+volume < escape ; default
+volume < 0x33 ; system
+volume < 0 ; default : osascript -e 'set volume output volume 0'
+volume < 1 ; default : osascript -e 'set volume output volume 10'
+volume < 2 ; default : osascript -e 'set volume output volume 20'
+volume < 3 ; default : osascript -e 'set volume output volume 30'
+volume < 4 ; default : osascript -e 'set volume output volume 40'
+volume < 5 ; default : osascript -e 'set volume output volume 50'
+volume < 6 ; default : osascript -e 'set volume output volume 60'
+volume < 7 ; default : osascript -e 'set volume output volume 70'
+volume < 8 ; default : osascript -e 'set volume output volume 80'
+volume < 9 ; default : osascript -e 'set volume output volume 90'
+volume < m ; default : osascript -e 'set volume output volume 100'
+volume < l : osascript -e "set volume output volume ((output volume of (get volume settings)) + 1)"
+volume < h : osascript -e "set volume output volume ((output volume of (get volume settings)) - 1)"
+
+# ============================================================
+# Mode - Window (Raycast Window Management)
+# ============================================================
+window < escape ; default
+window < 0x33 ; leader
+window < m ; default : open -g "raycast://extensions/raycast/window-management/maximize"
+window < a ; default : open -g "raycast://extensions/raycast/window-management/almost-maximize"
+window < c ; default : open -g "raycast://extensions/raycast/window-management/center"
+window < h ; default : open -g "raycast://extensions/raycast/window-management/left-half"
+window < l ; default : open -g "raycast://extensions/raycast/window-management/right-half"
+window < j ; default : open -g "raycast://extensions/raycast/window-management/bottom-half"
+window < k ; default : open -g "raycast://extensions/raycast/window-management/top-half"
+window < n ; default : open -g "raycast://extensions/raycast/window-management/next-display"
