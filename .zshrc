@@ -25,10 +25,23 @@ alias gc='git commit -m'
 alias gg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gcn='git commit -n -m'
 alias ggpush='git push origin $(git branch --show-current)'
+
 # 查看当前分支名并复制
-alias gb='CB=$(git branch --show-current);echo "$CB" | pbcopy;echo "$CB Copied!"'
-# 切换主分支
-alias gbm='git checkout main 2>/dev/null || git checkout master'
+curb() {
+  local current_branch=$(git branch --show-current)
+  echo "$current_branch" | pbcopy
+  echo "$current_branch Copied!"
+}
+
+# 切换到主分支 (带 -r 参数尝试识别远程 HEAD 分支)
+main() {
+  local target="main"
+  if [[ "$1" == "-r" ]]; then
+    target=$(git remote show origin 2>/dev/null | grep 'HEAD branch' | awk '{print $NF}')
+    [[ -z "$target" ]] && target="main"
+  fi
+  git checkout "$target" 2>/dev/null || git checkout master 2>/dev/null || echo "找不到主分支:("
+}
 
 
 # 开启代理

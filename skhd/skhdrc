@@ -19,6 +19,8 @@
 # ============================================================
 # global
 # ============================================================
+cmd + shift - space : open -a Ghostty
+rcmd - space : open -g "raycast://extensions/raycast/clipboard-history/clipboard-history"
 ctrl - space ; leader
 
 # ============================================================
@@ -26,7 +28,6 @@ ctrl - space ; leader
 # ============================================================
 leader < escape ; default
 leader < 0x33 ; default
-leader < space ; default : open -g "raycast://extensions/raycast/clipboard-history/clipboard-history"
 leader < a ; application
 leader < d ; directory
 leader < r ; raycast
@@ -44,7 +45,6 @@ application < b ; default : open -a "Google Chrome"
 application < c ; default : open -a "Calendar"
 application < f ; default : open -a "Finder"
 application < p ; default : open -a "Postman"
-application < g ; default : open -a "Ghostty"
 application < m ; default : open -a "Mail"
 application < n ; default : open -a "Notion"
 application < o ; default : open -a "Obsidian"
