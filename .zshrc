@@ -25,14 +25,14 @@ alias gc='git commit -m'
 alias gg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gcn='git commit -n -m'
 alias ggpush='git push origin $(git branch --show-current)'
-
+# 使用 fzf 交互式切换分支
+alias gsb="git branch -a --format='%(refname:short)' | fzf --preview 'git log --oneline --graph --color=always {}' | xargs git switch"
 # 查看当前分支名并复制
 curb() {
   local current_branch=$(git branch --show-current)
   echo "$current_branch" | pbcopy
   echo "$current_branch Copied!"
 }
-
 # 切换到主分支 (带 -r 参数尝试识别远程 HEAD 分支)
 main() {
   local target="main"
