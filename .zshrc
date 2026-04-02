@@ -17,16 +17,15 @@ alias lg=lazygit
 alias zshconfig="nvim ~/.zshrc"
 alias zshreload="source ~/.zshrc"
 
-alias gs='git status'
 alias gl='git pull'
-alias gm='git merge'
 alias ga='git add .'
-alias gc='git commit -m'
 alias gg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gc='git commit -m'
 alias gcn='git commit -n -m'
 alias ggpush='git push origin $(git branch --show-current)'
-# 使用 fzf 交互式切换分支
-alias gsb="git branch -a --format='%(refname:short)' | fzf --preview 'git log --oneline --graph --color=always {}' | xargs git switch"
+# amazing fzf
+alias gsb="git branch --format='%(refname:short)' | fzf --preview 'git log --oneline --graph --color=always {}' | xargs git switch"
+alias gmb="git branch --format='%(refname:short)' | fzf --preview 'git log --oneline --graph --color=always {}' | xargs git merge"
 # 查看当前分支名并复制
 curb() {
   local current_branch=$(git branch --show-current)
