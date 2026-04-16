@@ -119,7 +119,8 @@ backup_main() {
 
 
 # 切换 starship 主题
-export STARSHIP_CONFIG=~/.config/starship/rose-pine.toml
+export STARSHIP_CONFIG=~/.config/starship/tokyo-night.toml
+# export STARSHIP_CONFIG=~/.config/starship/rose-pine.toml
 # export STARSHIP_CONFIG=~/.config/starship/gruvbox.toml
 
 

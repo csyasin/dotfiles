@@ -1,0 +1,77 @@
+palette = "tokyonight"
+
+format = """
+[░▒▓](fg:blue)\
+$username\
+[](bg:bg_highlight fg:blue)\
+$directory\
+[](fg:bg_highlight bg:blue_dim)\
+$git_branch\
+$git_status\
+[](fg:blue_dim bg:bg_dark)\
+$nodejs\
+$rust\
+$golang\
+$php\
+[](fg:bg_dark)\
+\n$character"""
+
+[palettes.tokyonight]
+blue = '#7aa2f7'
+bg_highlight = '#3b4261'
+blue_dim = '#24283b'
+bg_dark = '#1f2335'
+bg_black = '#16161e'
+fg_light = '#c0caf5'
+fg_dark = '#010101'
+
+[username]
+show_always = true
+style_user = "bg:blue fg:fg_dark"
+style_root = "bg:blue fg:fg_dark"
+format = "[ $user ]($style)"
+
+[directory]
+style = "bg:bg_highlight fg:fg_light"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:blue_dim fg:blue"
+format = "[ $symbol $branch ]($style)"
+
+[git_status]
+style = "bg:blue_dim fg:blue"
+format = "[($all_status$ahead_behind )]($style)"
+
+[nodejs]
+symbol = ""
+style = "bg:bg_dark fg:blue"
+format = "[ $symbol ($version) ]($style)"
+
+[rust]
+symbol = ""
+style = "bg:bg_dark fg:blue"
+format = "[ $symbol ($version) ]($style)"
+
+[golang]
+symbol = ""
+style = "bg:bg_dark fg:blue"
+format = "[ $symbol ($version) ]($style)"
+
+[php]
+symbol = ""
+style = "bg:bg_dark fg:blue"
+format = "[ $symbol ($version) ]($style)"
+
+[character]
+success_symbol = "[](bold fg:blue)"
+error_symbol = "[](bold fg:red)"
