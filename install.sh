@@ -39,8 +39,8 @@ create_link "$DOTFILES_DIR/starship" ~/.config/starship
 # ghostty
 create_link "$DOTFILES_DIR/ghostty" ~/.config/ghostty
 
-# warp
-create_link "$DOTFILES_DIR/warp" ~/.warp
+# warp (only themes directory)
+create_link "$DOTFILES_DIR/warp/themes" ~/.warp/themes
 
 # yabai
 create_link "$DOTFILES_DIR/yabai" ~/.config/yabai
@@ -72,12 +72,6 @@ create_link "$DOTFILES_DIR/leader-key" ~/.config/leader-key
 create_link "$DOTFILES_DIR/vscode" ~/.config/vscode
 
 # lazygit (only config.yml to avoid syncing state.yml)
-mkdir -p ~/Library/Application\ Support/lazygit
-if [ -L ~/Library/Application\ Support/lazygit/config.yml ] && [ "$(readlink ~/Library/Application\ Support/lazygit/config.yml)" = "$DOTFILES_DIR/lazygit/config.yml" ]; then
-    echo "✓ ~/Library/Application Support/lazygit/config.yml is already linked correctly"
-else
-    echo "Creating link: ~/Library/Application Support/lazygit/config.yml -> $DOTFILES_DIR/lazygit/config.yml"
-    ln -sf "$DOTFILES_DIR/lazygit/config.yml" ~/Library/Application\ Support/lazygit/config.yml
-fi
+create_link "$DOTFILES_DIR/lazygit/config.yml" ~/Library/Application\ Support/lazygit/config.yml
 
 echo "Dotfiles setup complete!"
