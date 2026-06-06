@@ -15,7 +15,7 @@ macos-custom-icon = ~/.config/ghostty/icons/4.icns
 
 quick-terminal-position = center
 quick-terminal-size = 80%,80%
-quick-terminal-animation-duration = 0.1
+quick-terminal-animation-duration = 0.2
 
 custom-shader = shaders/cursor-blaze-no-trail.glsl
 custom-shader = shaders/cursor-smear.glsl

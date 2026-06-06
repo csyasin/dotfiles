@@ -42,14 +42,8 @@ create_link "$DOTFILES_DIR/ghostty" ~/.config/ghostty
 # warp (only themes directory)
 create_link "$DOTFILES_DIR/warp/themes" ~/.warp/themes
 
-# yabai
-create_link "$DOTFILES_DIR/yabai" ~/.config/yabai
-
 # skhd
 create_link "$DOTFILES_DIR/skhd" ~/.config/skhd
-
-# sketchybar
-create_link "$DOTFILES_DIR/sketchybar" ~/.config/sketchybar
 
 # nvim
 create_link "$DOTFILES_DIR/nvim" ~/.config/nvim
