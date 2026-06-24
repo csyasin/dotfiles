@@ -55,13 +55,13 @@ alias checkarch="uname -m"
 # 临时切换到 x86 的 zsh，使用 exit 回到 arm 架构
 alias usex86="arch -x86_64 zsh"
 
-# 将当前 git 项目的主分支打包备份到 ~/project-backup
+# 将当前 git 项目的主分支打包备份到 ~/buffalo-backup
 backup() {
   local backup_root buffalo_root archive archive_file project_name project_root
   local current_branch main_branch backup_status restore_status failed
   local project_roots archives
 
-  backup_root="$HOME/project-backup"
+  backup_root="$HOME/buffalo-backup"
   buffalo_root="$HOME/BUFFALO"
   project_roots=()
   failed=0
@@ -146,6 +146,8 @@ backup() {
       COPYFILE_DISABLE=1 tar -czf "$archive" \
         --exclude="*/.git" \
         --exclude="*/node_modules" \
+        --exclude="*/.next" \
+        --exclude="*/dist" \
         -C "$(dirname "$project_root")" "$project_name"
       backup_status=$?
     fi
